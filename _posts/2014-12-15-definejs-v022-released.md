@@ -30,7 +30,7 @@ which is responsible to wait for a specific global variable, and serves it as th
             //fulfill when succeeded and pass the fulfillment value
             fulfill({
               app: window.myApp,
-              log: 'This is just a sample promised object to serve as a promised module!'
+              log: 'This is just a sample promised object!'
             });
 
           } else {
@@ -49,7 +49,8 @@ Now you could easily require it, or add it as a dependency. What will happen is,
     //main.js
     require(['promisedModule'],
       function (promisedModule) {
-        console.log(promisedModule.log); //=>This is just a sample promised object!
+        console.log(promisedModule.log);
+        //=>This is just a sample promised object!
         console.log(promisedModule.app);
       });
 
