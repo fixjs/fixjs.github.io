@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Thinking Big and Working Collaboratively"
-description: ""
-category: 
-tags: []
+category: news
+tags: [JavaScript, Parallel]
 ---
 {% include JB/setup %}
 
