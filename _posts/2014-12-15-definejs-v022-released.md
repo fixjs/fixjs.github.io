@@ -6,7 +6,6 @@ tags: [JavaScript, AMD, DefineJS]
 ---
 {% include JB/setup %}
 
-##DefineJS v0.2.2 Released
 The new version with a whole bunch of examples and couple of new features, is ready to use. DefineJS now offers `Promissed Modules` and `use()` syntax.
 
 ##Promised Modules
