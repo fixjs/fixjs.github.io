@@ -46,4 +46,6 @@ require(function* () {
   app.lunch();
 });</code></pre>
 
-Which to me is much cleaner code in compared with passing dependencies as parameters. If you take a short look at the code you would see that, because of the synchronous style of coding you could even have **conditional dependencies**. It is worth noting that being able to have **conditional dependencies** makes the whole system more dynamic but on the other hand it goes through a totally different path of loading a module. For instance one of the possible debates around this approach would be the way we could concatenate this type of modules when we are not sure about their dependencies. Although I believe this type of issues and debates happen when you cross the border and com up with a new way of thinking.
+Which to me is much cleaner code in compared with passing dependencies as parameters. If you take a short look at the code you would see that, because of the synchronous style of coding you could even have **conditional dependencies**.
+
+It is worth noting that being able to have **conditional dependencies** makes the whole system more dynamic but on the other hand it goes through a totally different path of loading a module. For instance one of the possible debates around this approach would be the way we could concatenate this type of modules when we are not sure about their dependencies. Although I believe this type of issues and debates happen when you cross the border and com up with a new way of thinking.
