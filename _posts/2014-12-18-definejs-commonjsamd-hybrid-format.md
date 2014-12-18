@@ -8,9 +8,9 @@ tags: [DefineJS, Modular, AMD, CommonJS]
 
 ##DefineJS v0.2.4 Released
 
-This hybrid format allows to write modules with a CommonJS similar syntax. This feature is now possible thanks to the ES6 generators.
+This [hybrid CommonJS/AMD format](https://github.com/fixjs/define.js#commonjsamd-hybrid-format) allows to write modules with a new syntax similar to CommonJS. This feature is now possible thanks to the ES6 generators.
 
-Let's immagine a CommonJS module like:
+Let's imagine a CommonJS module like:
 <pre><code class="language-javascript">//app.js
 var utils = require('utils'),
   $ = require('../vendor/jquery');
