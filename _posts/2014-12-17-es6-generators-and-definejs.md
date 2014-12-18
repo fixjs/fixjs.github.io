@@ -2,7 +2,7 @@
 layout: post
 title: "ES6 Generators and DefineJS"
 category: fixjs
-tags: ['DefineJS', 'Modular', 'AMD']
+tags: [DefineJS, Modular, AMD]
 ---
 {% include JB/setup %}
 

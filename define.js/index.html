@@ -1,0 +1,15 @@
+---
+layout: page
+title: "DefineJS - A lightweight implementation of AMD module format"
+description: "A lightweight implementation of AMD module format"
+---
+{% include JB/setup %}
+
+{% for post in site.posts %}
+{% if post.tags contains 'DefineJS' %}
+<div class="blog-index">
+  {% assign content = post.content %}
+  {% include post_detail.html %}
+</div>
+{% endif %}
+{% endfor %}
