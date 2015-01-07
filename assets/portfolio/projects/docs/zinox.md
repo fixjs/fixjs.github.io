@@ -1,6 +1,6 @@
 # ZinoX
 
-The original name was `Zino` and along with all the extension packages and components it was called `ZinoX`. It **`was`** called `Zino` because after I finished working on the project the company changed its name but it didn't touch the code base.
+The original name was `Zino` and along with all the extension packages and components it was called `ZinoX`. It **`was`** called `Zino` because after I finished working on the project the company changed its name but they didn't touch the code base.
 
 ## What is it
 
