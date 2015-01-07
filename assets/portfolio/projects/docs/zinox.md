@@ -4,7 +4,7 @@ The original name was `Zino` and along with all the extension packages and compo
 
 ## What is it
 
-A JavaScript client framework aiming to set up an end to end solution for `**S**ingle **P**age **A**pplication`s(SPAs) and enterprise `web` applications. It is worth noting that what we call `SPA` these days didn't used to be called this way. The older trendy alternative phrase was **R**ich **I**nternet **A**pplications or RIAs. The wikipedia's definition starts like this:
+A JavaScript client framework aiming to set up an end to end solution for **S**ingle **P**age **A**pplications(SPAs) and enterprise web applications. It is worth noting that what we call `SPA` these days didn't used to be called this way. The older trendy alternative phrase was **R**ich **I**nternet **A**pplications or RIAs. The wikipedia's definition starts like this:
 > A rich Internet application (RIA) is a Web application that has many of the characteristics of desktop application software,
 
 Offering an end to end solution needed us to cover a whole bunch of different types of features and components but the most important part was to set up the best front end design pattern, similar to what we know these days as MVC solutions.
