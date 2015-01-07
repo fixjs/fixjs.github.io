@@ -4,7 +4,7 @@ The original name was `Zino` and along with all the extension packages and compo
 
 ## What is it
 
-A JavaScript client framework aiming to set up a end to end solution for `**S**ingle **P**age **A**pplication`s(SPAs) and enterprise `web` application. It is worth noting that what we call `SPA` these days didn't used to be called this way. The older trendy alternative phrase was **R**ich **I**nternet **A**pplications or RIAs. The wikipedia's definition starts like this:
+A JavaScript client framework aiming to set up an end to end solution for `**S**ingle **P**age **A**pplication`s(SPAs) and enterprise `web` applications. It is worth noting that what we call `SPA` these days didn't used to be called this way. The older trendy alternative phrase was **R**ich **I**nternet **A**pplications or RIAs. The wikipedia's definition starts like this:
 > A rich Internet application (RIA) is a Web application that has many of the characteristics of desktop application software,
 
 Offering an end to end solution needed us to cover a whole bunch of different types of features and components but the most important part was to set up the best front end design pattern, similar to what we know these days as MVC solutions.
@@ -134,9 +134,9 @@ To develop a `Zino` application instead of `HTML` files, developer should create
 
 Check out the way `my-component` is being used in the from element. And as you might have guessed `Zino` creates a JavaScript object which is an instance of `zinox.ui.controls.MyOtherComponent`.
 
+## Run the working example
+
 To check out a working example, extract the `zinox.zip` file and run the `serve.sh` file in the terminal, which will start a lightweight python http server on `3000`. Now in order to see how `Zino` actually works check this link out: [A working Zino/ZinoX example](http://localhost:3000/dre/client/index.xml).
 Or simply copy this `http://localhost:3000/dre/client/index.xml` to your address bar.
 
 When the page gets loaded you could do `View page source` and make sure if the loaded page is really  a `XML` file. Regarding the context of the page, it is worth noting that, this example is actually a working example of `zinox.ui.controls.ColorBoxModal` which as its name suggests is a Color Selector type thing implemented in `Zino`. You could choose your desired color and push the `Ok` button, which will change the background color of the page to the selected color.
-
-https://github.com/fixjs/fixjs.github.io/assets/portfolio/projects/docs/zinox.md
