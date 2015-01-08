@@ -134,6 +134,44 @@ To develop a `Zino` application instead of `HTML` files, developer should create
 
 Check out the way `my-component` is being used in the from element. And as you might have guessed `Zino` creates a JavaScript object which is an instance of `zinox.ui.controls.MyOtherComponent`.
 
+# Zino Realtime Soap/WSDL WebService Client
+
+Implementing a realtime web service client generator was a really exciting and challenging task to deal with. Imagine if it works:
+
+```xml
+<?xml version="1.0"?>
+<?xml-stylesheet href="../_transformer.xsl" type="text/xsl"?>
+<zino xmlns="http://ns.partia.com/zino" xmlns:ws="http://ns.partia.com/zinox/xml/ws">
+  <ws:import ns="_.myWebservice" url="http://tech-server:8066/dario/MyWebservice?wsdl" />
+  <!--...-->
+  <form>
+    <!--...-->
+    <zino:button text="GetAllSchema" onclick="_.myWebservice.getAllSchema();" />
+  </form>
+</zino>
+```
+
+So this actually works in `ZinoX` and the cool thing about this is, it also has a fully JavaScript based solution, I mean you cold create webservice clients just by writing couple of JavaScript code like:
+
+```javascript
+var srv = new zinox.xml.ws.WSRef(),
+  url = "http://dev101-pc.hq.partia.com/wsdlinout/wsdl.asmx?WSDL";
+srv.addNewServiceRefrence(url, 'wsdlinout', function(){
+  //...
+});
+```
+or even more simply:
+
+```javascript
+var url = "http://dev101-pc.hq.partia.com/wsdlinout/wsdl.asmx?WSDL";
+_.wsImport(url, 'wsdlinout', function(){
+  //...
+});
+
+```
+
+We've been sort of trying to help devs write less code and use `XML` just because it was much easier to read, understand and write.
+
 ## Run the working example
 
 To check out a working example, extract the `zinox.zip` file and run the `serve.sh` file in the terminal, which will start a lightweight python http server on `3000`. Now in order to see how `Zino` actually works check this link out: [A working Zino/ZinoX example](http://localhost:3000/dre/client/index.xml).
