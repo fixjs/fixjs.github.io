@@ -118,11 +118,11 @@ The final piece, which was the **APF** way of binding objects, shapes and xml at
 </a:bindings>
 ```
 
-This three together with the flowchart engine renders a simple flowchart like:
+These three pieces together with the flowchart engine renders a simple flowchart like:
 
 ![flow-chart1](https://cloud.githubusercontent.com/assets/6114456/5691006/cf9f3502-98c6-11e4-8d87-fe06b0448f88.png)
 
-As you see there is no sign of any svg nodes in the actual DOM, but we did use `canvas` elements for our main shapes. To be honest I still am not sure if it was the best way to do that. Actually not using `SVG` back then was for sure a really important trade off.
+As you see there is no sign of any `SVG` nodes in the actual DOM, but we did use `canvas` elements for our main shapes. To be honest I still am not sure if it was the best way to do that. Actually not using `SVG` back then was for sure a really important trade off.
 
 ## Undo/Redo
 
