@@ -63,8 +63,62 @@ The modeling engine is responsible to read this template and provide all the req
   </block>
 </flowchart>
 ```
+The final piece, which was the **APF** way of binding objects, shapes and xml attributes, is `bindings` xml document. Something like:
+```xml
+<a:bindings>
+    <a:move select="self::node()[not(@move='false') and not(@lock='true')]">
+    </a:move>
+    <a:resize select="self::node()[@resize='true' and not(@lock='true')]">
+    </a:resize>
+    <a:css select="self::node()[@lock='true']" default="locked">
+    </a:css>
+    <a:left select="@left">
+    </a:left>
+    <a:top select="@top">
+    </a:top>
+    <a:id select="@id">
+    </a:id>
+    <a:width select="@width">
+    </a:width>
+    <a:height select="@height">
+    </a:height>
+    <a:flipv select="@flipv">
+    </a:flipv>
+    <a:fliph select="@fliph">
+    </a:fliph>
+    <a:rotation select="@rotation">
+    </a:rotation>
+    <a:lock select="@lock">
+    </a:lock>
+    <a:type select="@type">
+    </a:type>
+    <a:caption select="@caption">
+    </a:caption>
+    <a:caption value="Untitled block">
+    </a:caption>
+    <a:cap-pos select="@cap-pos">
+    </a:cap-pos>
+    <a:zindex select="@zindex">
+    </a:zindex>
+    <a:image select="@src">
+    </a:image>
+    <a:traverse select="block">
+    </a:traverse>
+    <!-- Connection Binding Rules -->
+    <a:connection select="connection">
+    </a:connection>
+    <a:ref select="@ref">
+    </a:ref>
+    <a:input select="@input">
+    </a:input>
+    <a:output select="@output">
+    </a:output>
+    <a:label select="@label">
+    </a:label>
+</a:bindings>
+```
 
-This two together with the flowchart engine renders a simple flowchart like:
+This three together with the flowchart engine renders a simple flowchart like:
 
 ![flow-chart1](https://cloud.githubusercontent.com/assets/6114456/5691006/cf9f3502-98c6-11e4-8d87-fe06b0448f88.png)
 
@@ -91,3 +145,14 @@ Once you make the first change in the flowchart, the bound model gets automatica
 ```javascript
 wfExample.getModel().getXml();//=> <flowchart>...</flowchart>
 ```
+
+## Explore the example
+
+The way you could check out the example is as simple as downloading [the zip file](https://github.com/fixjs/fixjs.github.io/raw/master/assets/portfolio/projects/flowchart-designer.zip), extracting it and exposing the root folder in any desired http server. I usually go with:
+
+```python
+python -m SimpleHTTPServer 9000
+```
+Then this is what you will see when you open up the [localhost:9000](http://localhost:9000):
+
+![flowchart-screenshot2](https://cloud.githubusercontent.com/assets/6114456/5692339/ed91215c-9906-11e4-83c1-1cd3b45c12ef.png)
