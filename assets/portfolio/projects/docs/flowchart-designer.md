@@ -6,4 +6,62 @@ __Flowchart Designer__ was actually the key part of a bigger product, A BPMN . T
 
 The idea was kind of new and challenging in the local market in my home country but in europe couple of companies had been working on that for a while. One of them was [Signavio](http://www.signavio.com) which was focused around the same idea but with a difference: the front-end stack was centered around SVG, but ours was more of a JavaScript based solution with a bit use of HTML5 canvas element.
 
-...*More details will be here soon*...
+To get started with more detail about this project, I should mention that we didn't actually start off from scratch. Back then, there used to be a company or just a website named: ajax.org, which had a JavaScript library named: `APF` that I think stands for `Ajax.org Platform`. __APF__ already had a bunch of useful features for us to achieve what we wanted faster, so that I, as the fron-end team lead, decided to go with `APF` and start building something on top of that.
+
+In terms of BPMN related stuff all I could say is, the whole product was kind of responsible for generating couple of xml files, one of which stored the whole needed informtion for the shapes and their position, but the most important file to generate was a BPEL(Business Process Execution Language) document, which as its name suggests makes the whole BPMN diagram executable, that's why it was considered a BPMN2BPEL modeler.
+
+So lets go through the way it worked, actually it still is in production but only in the enterprise level, so I'd say: lets go through the way it works.
+
+## Diagram Models and templates
+Each diagram has its model, which has the underlying shape configration. For instance for a simple flowchart shapes the model could be:
+
+```xml
+<template>
+  <element type="eStart" picture="scripts/eappflow/shapes/start-trans.gif" dwidth="35" dheight="36">
+    <input x="17" y="33" position="bottom" name="1"></input>
+  </element>
+  <element type="eEnd" picture="scripts/eappflow/shapes/end-trans.gif" dwidth="35" dheight="35">
+    <input x="17" y="0" position="top" name="1"></input>
+  </element>
+  <element type="eActivity" picture="scripts/eappflow/shapes/task-transparent.png" dwidth="93" dheight="63" >
+    <input x="46" y="0" position="top" name="1"></input>
+    <input x="46" y="63" position="bottom" name="4"></input>
+  </element>
+  <element type="eDecisionActivity" picture="scripts/eappflow/shapes/decisiontask-trans-ver.gif" dwidth="93" dheight="105">
+    <input x="46" y="0" position="top" name="1"></input>
+    <input x="68" y="83" position="bottom" name="2"></input>
+    <input x="24" y="83" position="bottom" name="3"></input>
+    <input x="46" y="105" position="bottom" name="4"></input>
+  </element>
+  <element type="eDecision" picture="scripts/eappflow/shapes/decision-trans.gif" dwidth="43" dheight="43">
+    <input x="21" y="-1" position="top" name="1"></input>
+    <input x="21" y="44" position="bottom" name="2"></input>
+    <input x="-1" y="22" position="left" name="3"></input>
+    <input x="44" y="22" position="right" name="4"></input>
+  </element>
+</template>
+```
+
+The modeling engine is responsible to read this template and provide all the requirements for modeling the actual flowchart. A simple flowchart model could be like:
+
+```xml
+<flowchart>
+  <block id="b2" left="200" top="50" width="35" height="36" type="eStart" caption="Start" lock="false" zindex="1001" cap-pos="topside">
+    <bpel/>
+    <connection ref="b10" output="1" input="1" type="none-arrow">
+      <bpel/>
+    </connection>
+  </block>
+  <block id="b10" left="171" top="150" width="93" height="63" type="eActivity" caption="Activity" lock="false" zindex="1001" cap-pos="inside">
+    <bpel/>
+    <connection ref="b6" output="2" input="1" type="none-arrow">
+      <bpel/>
+    </connection>
+  </block>
+  <block id="b6" left="200" top="288" width="35" height="36" type="eEnd" caption="Terminate" lock="false" zindex="1001" cap-pos="outside">
+    <bpel/>
+  </block>
+</flowchart>
+```
+
+This two together with the flowchart engine renders a simple flowchart like:
