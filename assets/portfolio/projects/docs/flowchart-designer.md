@@ -65,3 +65,5 @@ The modeling engine is responsible to read this template and provide all the req
 ```
 
 This two together with the flowchart engine renders a simple flowchart like:
+
+![flow-chart1](https://cloud.githubusercontent.com/assets/6114456/5691006/cf9f3502-98c6-11e4-8d87-fe06b0448f88.png)
