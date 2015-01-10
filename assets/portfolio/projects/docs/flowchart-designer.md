@@ -67,3 +67,27 @@ The modeling engine is responsible to read this template and provide all the req
 This two together with the flowchart engine renders a simple flowchart like:
 
 ![flow-chart1](https://cloud.githubusercontent.com/assets/6114456/5691006/cf9f3502-98c6-11e4-8d87-fe06b0448f88.png)
+
+As you see there is no sign of any svg nodes in the actual DOM, but we did use `canvas` elements for our main shapes. To be honest I still am not sure if it was the best way to do that. Actually not using `SVG` back then was for sure a really important trade off.
+
+## Undo/Redo
+
+It is just ready to call right out of the box. You could do the regular `ctrl+z` and `ctrl+y` in the uploaded example.
+
+## JavaScript API
+
+The flowchart engine provides a really nice and easy to work with API. A realitime JavaScript object with the responsibility of taking care of all the arduous tasks based on a simple interface for developers. For instance to add a new shape to an existing flowchart all we need is first having access to the mentioned JavaScript object, and then you could easily do what you want. For instance in the online example I have uploaded in this repo:
+
+- **Add a new shape**:
+Just call the `addBlock(...)` function and pass it the desired block type, x/y position and a caption. The valid types are provided based on the template file we discussed above:
+
+```javascript
+wfExample.addBlock('eActivity', 0, 0, 'My favorite activity!');
+```
+
+- **Get the new model**:
+Once you make the first change in the flowchart, the bound model gets automatically updated and you can have access to the new xml document like:
+
+```javascript
+wfExample.getModel().getXml();//=> <flowchart>...</flowchart>
+```
