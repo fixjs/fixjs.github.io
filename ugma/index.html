@@ -1,0 +1,15 @@
+---
+layout: page
+title: "Ugma - A Javascript Framework"
+description: "This will be something you want like, and probably hate, but it will let you build everything in 5 minutes with a small amount of code."
+---
+{% include JB/setup %}
+
+{% for post in site.posts %}
+{% if post.tags contains 'Ugma' %}
+<div class="blog-index">
+  {% assign content = post.content %}
+  {% include post_detail.html %}
+</div>
+{% endif %}
+{% endfor %}
