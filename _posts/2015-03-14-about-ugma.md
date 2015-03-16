@@ -15,7 +15,7 @@ The point is not just about a performance bottlenecks. Other than performance, w
 - __emptyFunction__: I like the way the emptyFunction is being used as a 
 I Combinator/Identity function. SO why nit changing its name to something more meaningfull like `identity.js` or `identityFunction.js` instead of `emptyFunction.js`.
 
-- __inheritance__: I don't really believe the old fashioned way of inheritance in JavaScript:
+- __inheritance__: I don't really believe the old fashioned way of inheritance in JavaScript is a good way of implementing an inheritance model:
 
 ```javascript
 function Document(node) {
