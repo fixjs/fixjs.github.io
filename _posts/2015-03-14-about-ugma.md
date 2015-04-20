@@ -17,17 +17,17 @@ I Combinator/Identity function. SO why nit changing its name to something more m
 
 - __inheritance__: I don't really believe the old fashioned way of inheritance in JavaScript is a good way of implementing an inheritance model:
 
-```javascript
+<pre><code class="language-javascript">
 function Document(node) {
   return Element.call(this, node.documentElement);
 }
 
 Document.prototype = new Element();
-```
+</code></pre>
 
 This way the constructor function is getting called twice. But if I were to do this, I'd do something like:
 
-```javascript
+<pre><code class="language-javascript">
 function Document(node) {
   return Element.call(this, node.documentElement);
 }
@@ -35,6 +35,6 @@ function Document(node) {
 var proto = Object.create(Element.prototype);
 Document.prototype = Object.create(Element.prototype);
 proto.constructor = Document;
-```
+</code></pre>
 
 as it is obvious if constructor function adds new attributes to the context it will work because `Document` is calling the `Element` constructor itself. 
