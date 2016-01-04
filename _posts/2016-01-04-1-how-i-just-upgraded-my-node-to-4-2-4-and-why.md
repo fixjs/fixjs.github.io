@@ -13,7 +13,7 @@ I listen to a Node.js podcast called [NodeUP](http://nodeup.com/) which is highl
 > Should I be running or Node v5.0 or should I be running LTS 4.2.x? How do I figure that out?
 
 and both had a similar response, in a nutshell:  
-> Day to day I am using Node v5.0 but if I were deploying a server I would use the LTS(4.2.4) just because having that stability. - Rebecca
+  *Day to day I am using Node v5.0 but if I were deploying a server I would use the LTS(4.2.4) just because having that stability.* - Rebecca  
 
 This is exactly why I upgraded to 4.2.4 instead of 5.0 but to make more sense of it you have to listen to whole answer in the podcast itself: [NodeUp 96](http://nodeup.com/ninetysix). It is awesome.
 
