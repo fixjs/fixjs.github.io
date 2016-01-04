@@ -26,17 +26,16 @@ That is how I upgraded my node on my local machine.
 ##Using N
 I really like `nvm` BUT I used `n` on my production servers which to me sounds more reliable and has a much easier installation process and so far I haven't seen any of the issues I have had with `nvm`. That's how I upgraded my servers:
 
-```
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n 4.2.4
-sudo ln -sf /usr/local/n/versions/node/4.2.4/bin/node /usr/bin/node
-```
+    sudo npm cache clean -f
+    sudo npm install -g n
+    sudo n 4.2.4
+    sudo ln -sf /usr/local/n/versions/node/4.2.4/bin/node /usr/bin/node
+    
 and it was all I should do. Of course next time I no longer need to install `n` itself.
 
 ##What about npm 3?
 Using npm 3, your dependencies will be installed flat - by default, and there is no doubt that, IMHO, it is a huge improvement. The great thing about npm that I really like is how easy I could upgrade it using its own install command:
-```
-sudo npm install -g npm
-```
+
+    sudo npm install -g npm
+
 and done.
