@@ -1,4 +1,4 @@
-# My past projects
+# My past projects from around 7 years ago
 
 This is where I put the actual source code of my old but interesting JavaScript projects.
 An interesting combination of the two word: `old but interesting`.
