@@ -1,0 +1,11 @@
+{
+  "name": "tower-of-hanoi",
+  "version": "1.0.0-beta",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Mehran Hatami <mehranhatamie@gmail.com>",
+  "license": "ISC"
+}

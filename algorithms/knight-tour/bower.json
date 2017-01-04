@@ -1,0 +1,21 @@
+{
+  "name": "knight-tour",
+  "description": "",
+  "main": "main.js",
+  "authors": [
+    "Mehran Hatami <mehranhatamie@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.3",
+    "jquery": "^3.1.1"
+  }
+}
